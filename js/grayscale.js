@@ -17,8 +17,8 @@ $(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
+$(function () {
+    $('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
@@ -28,7 +28,7 @@ $(function() {
 });
 
 // Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
+$('.navbar-collapse ul li a').click(function () {
     $(".navbar-collapse").collapse('hide');
 });
 
@@ -36,8 +36,8 @@ $('.navbar-collapse ul li a').click(function() {
 var map = null;
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
-google.maps.event.addDomListener(window, 'resize', function() {
-    map.setCenter(new google.maps.LatLng(-12.200625, -38.973448));
+google.maps.event.addDomListener(window, 'resize', function () {
+    map.setCenter(new google.maps.LatLng(48.8263898, 2.2597681));
 });
 
 function init() {
@@ -48,7 +48,7 @@ function init() {
         zoom: 15,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(-12.200625, -38.973448),
+        center: new google.maps.LatLng(48.8263898, 2.2597681),
 
         // Disables the default Google Maps UI components
         disableDefaultUI: true,
@@ -65,7 +65,7 @@ function init() {
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
     var image = 'img/map-marker.png';
-    var myLatLng = new google.maps.LatLng(-12.200625, -38.973448);
+    var myLatLng = new google.maps.LatLng(48.8263898, 2.2597681);
     var beachMarker = new google.maps.Marker({
         position: myLatLng,
         title: 'MP 55',
